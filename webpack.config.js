@@ -24,6 +24,15 @@ module.exports = {
         MiniCssExtractPlugin.loader, 'css-loader',
           ],
       },
+      {
+        test: /\.js/,
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+        ],
+        exclude: /(node_modules)/,
+      },
     ],
   },
     plugins: [
